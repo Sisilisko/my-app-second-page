@@ -1,32 +1,613 @@
-.App {
-  text-align: center;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    line-height: 1;
+    background-color: #DAE6E6;
 }
-
-.App-link {
-  color: #61dafb;
+ol, ul {
+	list-style: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+blockquote, q {
+	quotes: none;
 }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.header {
+    width: 100%;
+    height: 105px;
+	display: flex;
+	justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #A9AAAF;
+    position: fixed;
+    align-items: center;
+    line-height: 1.1;
+    z-index: 1;
+    font-family: 'Amatic SC', cursive;
+    margin-top: -105px;
+}
+.logo {
+	margin-left: 20px;
+	display: flex;
+	flex: none;
+	align-items: center;
+}
+.logo-pic,
+.name {
+	display: block;
+}
+.logo-pic {
+	width: 60px;
+    height: 60px;
+    margin: 0 24px 0 22px;
+}
+.logo-pic img{
+    width: 100%;
+    height: 100%;
+}
+.logo-pic img:hover{
+    animation-name: spin;
+    animation-duration: 3400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ 
+    z-index: 100;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.name {
+    font-size: 1.9rem;
+    color: #333;
+}
+.nav {
+	display: -webkit-flex;
+	display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+.nav a, .schedule{
+	background: #333;
+	width: 130px; 
+	height: 50px;
+	font-size: 1.5rem;
+	color: #eee;
+	text-decoration: none;
+	margin: 5px 0 0 5px;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slider{
+    width: 100%;
+    height: 667px;
+    background-image:url(http://localhost:3000/img/blue-schnee-sky.jpg);
+    background-position-y: -87px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-color: rgb(59, 118, 185);
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 1.5px;
+    background-size: cover;
+    margin-top: 105px;
+}
+.languages{
+    color: white;
+    font-size: 1.5rem;
+    height: 521px;
+    width: 842px;
+    justify-content: center;
+    align-items: center;
+    line-height: 27px;
+    padding: 60px 100px 0 101px;
+    text-align: center;
+}
+.languages>div{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 151px;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    margin: 26px;
+}
+.languages div img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 9px;
+}
+.languages>div:hover{
+    transform: scale(1.1);
+}
+.island-flag{
+    background-image: url(http://localhost:3000/img/island-flag-hover.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.island-flag:hover{
+    background-image: url(http://localhost:3000/img/island-flag.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.norway-flag{
+    background-image: url(http://localhost:3000/img/norway-flag-hover.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.norway-flag:hover{
+    background-image: url(http://localhost:3000/img/norway-flag.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.swiden-flag{
+    background-image: url(http://localhost:3000/img/swiden-flag-hover.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.swiden-flag:hover{
+    background-image: url(http://localhost:3000/img/swiden-flag.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.denmark-flag{
+    background-image: url(http://localhost:3000/img/denmark-flag-hover.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.denmark-flag:hover{
+    background-image: url(http://localhost:3000/img/denmark-flag.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.suomi-flag{
+    background-image: url(http://localhost:3000/img/suomi-flag-hover.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.suomi-flag:hover{
+    background-image: url(http://localhost:3000/img/suomi-flag.png);
+    width: 150px;
+    height: 103px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+.responce-button{
+    width: 298px;
+    height: 74px;
+    color:white !important;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    letter-spacing: 2.4px;
+    line-height: 29px;
+    margin-left: 273px;
+    background-image: none;
+    background: transparent;
+}
+.responce-button:hover{
+}
+.studyng-forms{
+    display: flex;
+    width: 100%;
+    height: 684px;
+    background-color: #DAE6E6;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7rem;
+}
+.content{
+    flex: auto;
+    padding: 99px 153px;
+    box-sizing: border-box;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 84px 250px;
+    grid-column-gap: 74px;
+} 
+.top-line{
+    font-size: 1.9rem;
+    color: rgb(70, 23, 9);
+    display: flex;
+    justify-content: center;
+    align-self: start;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    letter-spacing: 1.1px;
+}
+.grid-itm{
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 1.1px;
+}
+.grid-img{
+    width: 215px;
+    height: 215px;
+    margin: 0 auto 20px;
+    flex: 0 1 80%;
+    grid-row: 2;
+}
+.grid-cont{
+    justify-self: end;
+    align-self: center;
+}
+.decor{
+    position: absolute;
+    width: 100%;
+    margin: 613px 0;
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+.features{
+    width: 100%;
+    height: 684px;
+    background-color: #AEC8C9;
+    display: flex;
+}
+.img-features{
+    height: 100%;
+}
+.pluses{
+    width: 100%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.9rem;
+    flex-wrap: wrap;
+    padding: 69px 85px 90px 85px;
+    line-height: 79px;
+}
+.row:first-child {
+    text-align: center;
+    color: #491B1B;
+}
+.col-2{
+    align-self: center;
+}
+.knowledge-botton{
+    width: 298px;
+    height: 74px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    letter-spacing: 2.4px;
+    line-height: 29px;
+    margin: 30px auto auto auto;
+}
+.reviews{
+    width: 100%;
+    height: 684px;
+    background-color: #CECED2;
+    justify-content: center;
+}
+.students-rev{
+    padding: 35px 179px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7rem;
+    justify-content: center;
+}
+.main-line {
+    text-align: center;
+    color: #491B1B;
+    padding-bottom: 20px;
+}
+.students-rev .row{
+    justify-content: center;
+    display: flex;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-wrap: nowrap;
+}
+.col-4{
+    display: block;
+    text-align: center;
+}
+.col-1{
+    padding-top: 140px;
+    padding-left: 39px;
+}
+.photo{
+    background-color: #DAE6E6;
+    border: 1px solid #9A9D9E;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 1.5rem;
+    justify-content: center;
+    position: absolute;
+    height: 528px;
+}
+.photo img{
+    padding-bottom: 20px;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    height: 685px;
+    background-image:url(http://localhost:3000/img/footer.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    color: white;
+    font-size: 2rem;
+    width: 231px;
+    font-family: 'Amatic SC', cursive;
+    margin: 50px 0 0 50px;
+}
+.connects{
+    width: 272px;
+    height: 53px;
+    margin: 27px 48px;
+    display: flex;
+}
+.fb{
+    background-image: url(http://localhost:3000/img/connects.png);
+    height: 53px;
+    width: 52px;
+    display: block;
+}
+.vk {
+    background-image: url(http://localhost:3000/img/connects.png);
+    height: 53px;
+    width: 77px;
+    display: block;
+    background-position-x: -65px;
+    background-position-y: 3px;
+}
+.skype {
+    background-image: (http://localhost:3000/img/connects.png);
+    height: 53px;
+    width: 57px;
+    display: block;
+    background-position-x: -152px;
+}
+.telegram {
+    background-image: url(http://localhost:3000/img/connects.png);
+    height: 53px;
+    width: 52px;
+    display: block;
+    background-position-x: -220px;
+}
+.fb, .vk, .skype{
+    margin-right: 12px;
+}
+.col_back{
+    width: 312px;
+    padding-top: 48px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7rem;
+    color: white;
+    margin-right: 30px;
+}
+.form-group input {
+    background: rgba(255,255,255,0.5);
+    border: none;
+}  
+.knowledge-lesson{
+    width: 236px;
+    height: 51px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    letter-spacing: 2.4px;
+    line-height: 29px;
+    margin: 30px auto auto auto;
+}
+.rights{
+    font-size: 1.3rem;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    width: 133px;
+    position: absolute;
+    margin-top: 126px;
+    margin-left: 178px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.languages a{
+        text-decoration: none;
+        color: white;
+    }
+.links a{
+    color: #DAE6E6;
+}
+.links a:hover{
+    color: white;
+}
+.schedule-sheme{
+    margin-top: 105px;
+    width: 100%;
+    height: fit-content;
+    padding: 18px 95px 24px 95px;
+}
+.schedule-name{
+    text-align: center;
+    padding: 7px;
+    font-size: 2.6rem;
+    font-family: 'Amatic SC', cursive;
+}
+.schedule-season{
+    text-align: left;
+    font-size: 2.3rem;
+    margin-top: 40px;
+    margin-left: 21px;
+    transform: rotate(-23deg);
+    float: left;
+    font-family: 'Amatic SC';
+}
+.Finnish-C, .Finnish-AB{
+    background-color: #6CB5D7;
+}
+.Norwey-A{
+    background-color: #7290B6;
+}
+.Island-A, .Island-С{
+    background-color: #FAFCFC;
+}
+.Denmark-A, .Denmark-B, .Denmark-Int{
+    background-color: #D9958B;
+}
+.Sweden-A, .Sweden-C{
+    background-color: #F4E952;
+}
+td div{
+    width: 160px;
+    text-align: center;
+    padding: 11px;
+    border-radius: 3px;
+    height: 48px;
+    vertical-align: middle;
+    display: inherit;
+    vertical-align: middle;
+}
+td div:hover{
+    transform: scale(1.1);
+}
+.button-back {
+    font-family: 'Amatic SC';
+    width: 298px;
+    height: 74px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    letter-spacing: 2.4px;
+    line-height: 29px;
+    margin: 0px auto 28px auto;
+}
+.button-back:hover{
+    border: 1px solid white;
+}
+.button-back a:hover{
+    text-decoration: none;
+}
+@media screen and (max-width:938px) {
+    .header{
+        height: 150px;
+        justify-content: center;
+    }
+    .nav{
+        margin: -19px 0 0 10px;
+    }
+    .logo{
+        margin: 0;
+    }
+}
+.advantage-sum-school{
+    width: 100%;
+    height: 350px;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 1.5px;
+    padding: 33px 80px 90px 80px;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title-sum-school{
+    width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #491B1B;
+    margin-top: 105px;
+    padding-top: 69px;
+    font-family: 'Amatic SC', cursive;
+}
+.ss-img{
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #ECEEEE;
+    height: 140px;
+    width: 140px;
+    border-radius: 50px;
+}
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC')
