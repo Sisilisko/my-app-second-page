@@ -1,11 +1,10 @@
-import React from "react";
-import "../../bootstrap.css";
-import "../../App.css";
-import Logo from "../../img/logo.png";
+import React from 'react';
+import "../bootstrap.css";
+import "../App.css";
+import Logo from "../img/logo.png";
 
-class header extends React.Component{
-    render(){
-        return(
+const header = props => {
+    return(
         <div className="header">
             <div href="" className="logo">
                 <div className="logo-pic">
@@ -20,8 +19,7 @@ class header extends React.Component{
                 <a href="#" className="signin">Летняя школа</a>
             </nav>
         </div>
-        );
-    }
+    );
 }
 
 export default header;

@@ -2,26 +2,13 @@ import React, { Component } from 'react';
 import Logo from "./img/logo.png";
 import './bootstrap.css';
 import './App.css';
-import header from "./components/header/header.js"
+import header from "./components/header/header.js";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-            <div href="" className="logo">
-                <div className="logo-pic">
-                <img id="rotateImg" src={Logo} alt="logo" />
-                </div>
-                <div className="name">NORD<br />школа иностранных языков</div>
-            </div>
-            <nav className="nav">
-                <a href="#" className="schedule">Расписание</a>    
-                <a href="#" className="paying">Цены</a>
-                <a href="#" className="info">О нас</a>
-                <a href="#" className="signin">Летняя школа</a>
-            </nav>
-        </header>
+        <header />
 <div className="schedule-season">1 семестр, 2018</div>
 <div className="schedule-sheme">
 <div className="schedule-name">Расписание</div>
