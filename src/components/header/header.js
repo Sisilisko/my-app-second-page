@@ -1,9 +1,7 @@
 import React from "react";
-import "../../bootstrap.css";
-import "../../App.css";
 import Logo from "../../img/logo.png";
 
-class header extends React.Component{
+class Header extends React.Component{
     render(){
         return(
         <div className="header">
@@ -24,4 +22,4 @@ class header extends React.Component{
     }
 }
 
-export default header;
+export default Header;

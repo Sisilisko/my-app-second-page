@@ -1,8 +1,9 @@
 import React from "react";
 
-class schedule extends React.Component{
+class Schedule extends React.Component{
     render(){
         return(
+            <div>
             <div className="schedule-season">1 семестр, 2018</div>
             <div className="schedule-sheme">
                 <div className="schedule-name">Расписание</div>
@@ -84,7 +85,10 @@ class schedule extends React.Component{
                     </tr>                  
                     </tbody>
                 </table>
-            </div>    
-        )
+            </div>   
+            </div> 
+        );
     }
 }
+
+export default Schedule;
