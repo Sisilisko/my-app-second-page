@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "../../img/logo.png";
+import Logo from "../img/logo.png";
+import {Link} from "react-router-dom"
 
 class Header extends React.Component{
     render(){
@@ -12,7 +13,7 @@ class Header extends React.Component{
                 <div className="name">NORD<br />школа иностранных языков</div>
             </div>
             <nav className="nav">
-                <a href="#" className="schedule">Расписание</a>    
+                <Link to="/schedule" className="/schedule">Расписание</Link>
                 <a href="#" className="paying">Цены</a>
                 <a href="#" className="info">О нас</a>
                 <a href="#" className="signin">Летняя школа</a>
