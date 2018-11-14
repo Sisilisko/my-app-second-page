@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Home from './Home';
+import Summer from './Summer';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const Rout = function(){
-    return(<Router>
+const Rout = function() {
+    return (<Router>
         <Switch>
-            <Route Link to="/" exact component={Home} />
-            <Route Link to="/schedule" component={App} />
+            <Route path="/" exact component={Home} />
+            <Route path="/schedule/" component={App} />
+            <Route path="/summer_school/" component={Summer} />
         </Switch>
     </Router>);
 };

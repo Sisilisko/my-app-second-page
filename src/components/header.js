@@ -10,13 +10,13 @@ class Header extends React.Component{
                 <div className="logo-pic">
                 <img id="rotateImg" src={Logo} alt="logo" />
                 </div>
-                <div className="name">NORD<br />школа иностранных языков</div>
+                <Link to="/" className="link-name"><div className="name">NORD<br />школа иностранных языков</div></Link>
             </div>
             <nav className="nav">
                 <Link to="/schedule" className="/schedule">Расписание</Link>
                 <a href="#" className="paying">Цены</a>
                 <a href="#" className="info">О нас</a>
-                <a href="#" className="signin">Летняя школа</a>
+                <Link to="/summer_school/" className="signin">Летняя школа</Link>
             </nav>
         </div>
         );

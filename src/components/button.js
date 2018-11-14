@@ -1,9 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 class Button extends React.Component{
     render(){
         return(
-            <a href="index.html" className="button-back">Вернуться на главную страницу</a>
+            <Link to="/" className="button-back">Вернуться на главную страницу</Link>
         );
     }
 }
