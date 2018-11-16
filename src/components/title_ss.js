@@ -17,6 +17,7 @@ class Title_SS extends React.Component{
                     <th className="adv-ss"><div className="ss-img"><img src={house} className="img-pic" /></div></th>
                     <th className="adv-ss-text">различные варианты проживания</th>
                 </tr>
+                <br />
                 <tr>
                     <th className="adv-ss"><div className="ss-img"><img src={shoes} className="img-pic" /></div></th>
                     <th className="adv-ss-text">новые незабываемые впечатления и знакомства</th>

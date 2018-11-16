@@ -1,9 +1,12 @@
 import React from "react";
+import viking from "../img/viking.png"
 
 class Order_SS extends React.Component{
     render(){
         return(
+            
             <div className="order-summer-school">
+            <img src={viking} className="viking" />
                 <div className="form-group-ss">
                     <div className="order-ss-name">Не смогли выбрать подходящий вариант?<br />
                             Оставьте свои данные, и мы обязательно поможем!</div>
