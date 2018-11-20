@@ -7,6 +7,7 @@ class Schedule extends React.Component{
             <div className="schedule-season">1 семестр, 2018</div>
             <div className="schedule-sheme">
                 <div className="schedule-name">Расписание</div>
+                <div className="schedule-both">
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -85,7 +86,16 @@ class Schedule extends React.Component{
                     </tr>                  
                     </tbody>
                 </table>
-            </div>   
+            <div className="schedule-menu">
+                <div className="all-lessons">Все занятия</div>
+                <div className="Norwegian">Норвержский</div>
+                <div className="Danish">Датский</div>
+                <div className="Swedish">Шведский</div>
+                <div className="Icelandic">Исландский</div>
+                <div className="Finish">Финский</div>
+            </div>
+            </div>
+            </div>
             </div> 
         );
     }

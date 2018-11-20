@@ -13,10 +13,10 @@ class Footer extends React.Component{
                         <div><a href="#">Отзывы</a></div>
                     </div>
                 <div className="connects">
-                    <a href="www.facebook.com" className="fb" target="_blank"></a>
-                    <a href="www.vk.com" className="vk" target="_blank"></a>
-                    <a href="www.skype.com" className="skype" target="_blank"></a>
-                    <a href="www.telegram.com" className="telegram" target="_blank"></a>
+                    <a href="www.facebook.com" className="fb" target="_blank" title="Facebook"></a>
+                    <a href="www.vk.com" className="vk" target="_blank" title="ВКонтакте"></a>
+                    <a href="www.skype.com" className="skype" target="_blank" title="Skype"></a>
+                    <a href="www.telegram.com" className="telegram" target="_blank" title="Telegram"></a>
                 </div>
             </div>
             <div className="col_back">

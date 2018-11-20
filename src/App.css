@@ -504,7 +504,7 @@ a:hover {
     margin-top: 105px;
     width: 100%;
     height: fit-content;
-    padding: 18px 95px 24px 95px;
+    padding: 18px 55px 24px 55px;
 }
 .schedule-name{
     text-align: center;
@@ -521,22 +521,25 @@ a:hover {
     float: left;
     font-family: 'Amatic SC';
 }
-.Finnish-C, .Finnish-AB{
+.Finnish-C, .Finnish-AB, .Finish{
     background-color: #6CB5D7;
 }
-.Norwey-A{
+.Norwey-A, .Norwegian{
     background-color: #7290B6;
 }
-.Island-A, .Island-С{
+.Island-A, .Island-С, .Icelandic{
     background-color: #FAFCFC;
 }
-.Denmark-A, .Denmark-B, .Denmark-Int{
+.Denmark-A, .Denmark-B, .Denmark-Int, .Danish{
     background-color: #D9958B;
 }
-.Sweden-A, .Sweden-C{
+.Sweden-A, .Sweden-C, .Swedish{
     background-color: #F4E952;
 }
-td div{
+.all-lessons{
+    background-color: #A9AAAF;
+}
+td div, .all-lessons, .Norwegian, .Danish, .Swedish, .Icelandic, .Finish{
     width: 160px;
     text-align: center;
     padding: 11px;
@@ -548,6 +551,34 @@ td div{
 }
 td div:hover{
     transform: scale(1.1);
+}
+.schedule-both{
+    vertical-align: top;
+}
+.table-striped{
+    width: 1065px;
+    margin-right: 80px;
+    margin-left: -61px;
+    display: inline-block;
+}
+.all-lessons, .Norwegian, .Danish, .Swedish, .Icelandic, .Finish{
+    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-top: 10px;
+    vertical-align: middle;
+    height: 48px;
+    line-height: 24px;
+}
+.schedule-menu{
+    border: solid 1px #A9AAAF;
+    border-radius: 20px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 43px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #CFDADA;
 }
 .button-back {
     font-family: 'Amatic SC';

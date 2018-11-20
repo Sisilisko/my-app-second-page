@@ -10,7 +10,7 @@ class Header extends React.Component{
                 <div className="logo-pic">
                 <img id="rotateImg" src={Logo} alt="logo" />
                 </div>
-                <Link to="/" className="link-name"><div className="name">NORD<br />школа иностранных языков</div></Link>
+                <Link to="/" className="link-name" title="На главную"><div className="name">NORD<br />школа иностранных языков</div></Link>
             </div>
             <nav className="nav">
                 <Link to="/schedule" className="/schedule">Расписание</Link>
