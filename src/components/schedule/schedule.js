@@ -1,9 +1,9 @@
 import React from "react";
 
 class Schedule extends React.Component{
-    buttonClickNorwegian = () => {
-        this.buttonClick();
-        fetch('../../schedule-lessons-table.js')
+
+    btnClickNorwegian = () => {
+        console.log("hi"); 
     }
 
     render(){
@@ -94,12 +94,12 @@ class Schedule extends React.Component{
                     </tbody>
                 </table>
             <div className="schedule-menu">
-                <div className="all-lessons" onClick={btnClickAllLessons}>Все занятия</div>
-                <div className="Norwegian" onClick={btnClickNorwegian} data={lessons}>Норвержский</div>
-                <div className="Danish" onClick={btnClickDanish}>Датский</div>
-                <div className="Swedish" onClick={btnClickSwedish}>Шведский</div>
-                <div className="Icelandic" onClick={btnClickIcelandic}>Исландский</div>
-                <div className="Finish" onClick={btnClickFinnish}>Финский</div>
+                <div className="all-lessons" onClick={this.btnClickAllLessons}>Все занятия</div>
+                <div className="Norwegian" onClick={this.btnClickNorwegian} data={lessons}>Норвержский</div>
+                <div className="Danish" onClick={this.btnClickDanish}>Датский</div>
+                <div className="Swedish" onClick={this.btnClickSwedish}>Шведский</div>
+                <div className="Icelandic" onClick={this.btnClickIcelandic}>Исландский</div>
+                <div className="Finish" onClick={this.btnClickFinnish}>Финский</div>
             </div>
             </div>
             </div>
