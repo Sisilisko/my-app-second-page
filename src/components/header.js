@@ -13,9 +13,9 @@ class Header extends React.Component{
                 <Link to="/" className="link-name" title="На главную"><div className="name">NORD<br />школа иностранных языков</div></Link>
             </div>
             <nav className="nav">
-                <Link to="/schedule" className="/schedule">Расписание</Link>
-                <a href="#" className="paying">Цены</a>
-                <a href="#" className="info">О нас</a>
+                <Link to="/schedule/" className="/schedule">Расписание</Link>
+                <a href="/prices/" className="paying">Цены</a>
+                <a href="/about_us/" className="info">О нас</a>
                 <Link to="/summer_school/" className="signin">Летняя школа</Link>
             </nav>
         </div>

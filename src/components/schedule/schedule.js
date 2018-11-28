@@ -1,7 +1,14 @@
 import React from "react";
 
 class Schedule extends React.Component{
+    buttonClickNorwegian = () => {
+        this.buttonClick();
+        fetch('../../schedule-lessons-table.js')
+    }
+
     render(){
+        const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
+        const {lessons} = this.props;
         return(
             <div>
             <div className="schedule-season">1 семестр, 2018</div>
@@ -87,12 +94,12 @@ class Schedule extends React.Component{
                     </tbody>
                 </table>
             <div className="schedule-menu">
-                <div className="all-lessons">Все занятия</div>
-                <div className="Norwegian">Норвержский</div>
-                <div className="Danish">Датский</div>
-                <div className="Swedish">Шведский</div>
-                <div className="Icelandic">Исландский</div>
-                <div className="Finish">Финский</div>
+                <div className="all-lessons" onClick={btnClickAllLessons}>Все занятия</div>
+                <div className="Norwegian" onClick={btnClickNorwegian} data={lessons}>Норвержский</div>
+                <div className="Danish" onClick={btnClickDanish}>Датский</div>
+                <div className="Swedish" onClick={btnClickSwedish}>Шведский</div>
+                <div className="Icelandic" onClick={btnClickIcelandic}>Исландский</div>
+                <div className="Finish" onClick={btnClickFinnish}>Финский</div>
             </div>
             </div>
             </div>

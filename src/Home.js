@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Header from "./components/header.js";
 import Footer from "./components/footer";
 import Slider from "./components/slider";
-import Study_forms from "./components/study_forms";
+import StudyForms from "./components/study_forms";
 import Features from "./components/features";
-import Reviews from "./components/reviews"
+import Reviews from "./components/reviews";
+import BtnBackToTop from "./components/btn-back-to-top"
 
 class Home extends Component {
   render() {
@@ -12,7 +13,8 @@ class Home extends Component {
         <div className="Home">
             <Header />
             <Slider />
-            <Study_forms />
+            <BtnBackToTop />
+            <StudyForms />
             <Features />
             <Reviews />
             <Footer />

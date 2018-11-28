@@ -6,7 +6,7 @@ class Order_SS extends React.Component{
         return(
             
             <div className="order-summer-school">
-            <img src={viking} className="viking" />
+            <img src={viking} className="viking" alt="viking" />
                 <div className="form-group-ss">
                     <div className="order-ss-name">Не смогли выбрать подходящий вариант?<br />
                             Оставьте свои данные, и мы обязательно поможем!</div>

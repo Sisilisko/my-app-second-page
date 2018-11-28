@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class Footer extends React.Component{
     render(){
@@ -6,11 +7,11 @@ class Footer extends React.Component{
             <div className="footer">
                 <div className="footer-left">
                     <div className="links">
-                        <div><a href="#">Курсы</a></div>
-                        <div><a href="#">Расписание</a></div>
-                        <div><a href="#">Летняя школа</a></div>
+                        <div><a hash="#">Курсы</a></div>
+                        <div><Link to="/schedule">Расписание</Link></div>
+                        <div><Link to="/summer_school">Летняя школа</Link></div>
                         <div><a href="#">Способы оплаты</a></div>
-                        <div><a href="#">Отзывы</a></div>
+                        <div><a href="/#reviews-link">Отзывы</a></div>
                     </div>
                 <div className="connects">
                     <a href="www.facebook.com" className="fb" target="_blank" title="Facebook"></a>
@@ -23,15 +24,15 @@ class Footer extends React.Component{
                 <div className="f-title">Хочешь узнать больше?	
                     <div className="f-pre-title">Запишись на открытый урок!</div></div>
                 <div className="form-group">
-                    <label className="col-form-label" for="f-nm">Твое имя</label>
+                    <label className="col-form-label">Твое имя</label>
                     <input type="text" className="form-control" name="nm" id="nm" />
                 </div>
                 <div className="form-group">
-                    <label className="col-form-label" for="f-ph">Телефон</label>
+                    <label className="col-form-label">Телефон</label>
                     <input type="text" className="form-control" id="ph" name="ph" />
                 </div>
                 <div className="form-group">
-                    <label className="col-form-label" for="f-ml">e-mail</label>
+                    <label className="col-form-label">e-mail</label>
                     <input type="text" className="form-control" id="ml" name="ml" />
                 </div>
                     <a href="https://trello.com/b/N4dpxK7T/level-up-web-dev-grey-team" className="knowledge-lesson">Записаться</a>

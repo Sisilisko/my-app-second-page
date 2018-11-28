@@ -10,15 +10,15 @@ class Study_forms extends React.Component{
             <div className="content">
                 <div className="top-line">Формы обучения</div>
                 <div className="grid-itm">
-                    <img src={online} className="grid-img" />
+                    <img src={online} className="grid-img" alt="online-learning" />
                     <div className="grid-cont">Онлайн-обучение</div>
                 </div>
                 <div className="grid-itm">
-                        <img src={group} className="grid-img" />
+                        <img src={group} className="grid-img" alt="group-learning" />
                         <div className="grid-cont">Занятия в группе</div>
                 </div>
                 <div className="grid-itm">
-                        <img src={individ} className="grid-img" />
+                        <img src={individ} className="grid-img" alt="individ-learning" />
                         <div className="grid-cont">Индивидуальные занятия</div>
                 </div>
             </div>

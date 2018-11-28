@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import Header from "./components/header.js";
 import Footer from "./components/footer";
-import Title_SS from "./components/title_ss";
-import Option_SS from "./components/option_ss";
-import Order_SS from "./components/order_ss";
+import TitleSS from "./components/title_ss";
+import OptionSS from "./components/option_ss";
+import OrderSS from "./components/order_ss";
 
 class Summer extends Component {
   render() {
     return(
       <div className="Summer">
       <Header />
-      <Title_SS />
-      <Option_SS />
-      <Option_SS />
-      <Option_SS />
-      <Option_SS />
+      <TitleSS />
+      <OptionSS />
+      <OptionSS />
+      <OptionSS />
+      <OptionSS />
         <div className="pages">1 2 3 4 5 6 7</div>
-      <Order_SS />
+      <OrderSS />
       <Footer />
       </div>
     );

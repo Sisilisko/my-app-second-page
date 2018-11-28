@@ -10,7 +10,7 @@ class Features extends React.Component{
     render(){
         return(
             <div className="features">
-            <img src={houses} className="img-features" />
+            <img src={houses} className="img-features" alt="img-features" />
             <div className="pluses">
                 <div className="row">
                     <div className="col-sm">
@@ -18,19 +18,19 @@ class Features extends React.Component{
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-2"><img src={sign1} /></div>
+                    <div className="col-2"><img src={sign1} alt="sign1" /></div>
                     <div className="col-10">у  нас только квалифицированные преподаватели с большим опытом</div>
                 </div>
                 <div className="row">
-                    <div className="col-2"><img src={sign2} /></div>
+                    <div className="col-2"><img src={sign2} alt="sign2" /></div>
                     <div className="col-10">уютные аудитории расположены в центре города</div>
                 </div>
                 <div className="row">
-                    <div className="col-2"><img src={sign3} /></div>
+                    <div className="col-2"><img src={sign3} alt="sign3" /></div>
                     <div className="col-10">подготовка к экзаменам на получение гражданства</div>
                 </div>
                 <div className="row">
-                    <div className="col-2"><img src={sign4} /></div>
+                    <div className="col-2"><img src={sign4} alt="sign4" /></div>
                     <div className="col-10">ежегодное закрепление полученных знаний в летних школах</div>
                 </div>
             <a href="https://trello.com/b/N4dpxK7T/level-up-web-dev-grey-team" className="knowledge-botton">Узнать больше о школе</a>
