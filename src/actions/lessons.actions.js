@@ -1,13 +1,18 @@
-import {GET_LESSONS} from "../actionsConstants"
+import {GET_LESSONS} from "../actionsConstants";
+import {schTable} from "../schedule-lessons-table.js"
 
-export const obj = {
+export const test = ()=>({
     type: "",
-}
+})
 
-export const getLessons = (dispatch)=>{
-    dispatch({
-        type: GET_LESSONS,
-        payload: Array,
-    })
-
-}
+export const getLessons = (dispatch) => {
+    fetch({schTable})
+        .then(data => data.json())
+        .then(data => {
+            const arr = data.map(td => td.div);
+            dispatch({
+                type: GET_LESSONS,
+                payload: arr,
+            });
+        });
+};

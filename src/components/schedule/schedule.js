@@ -1,6 +1,13 @@
 import React from "react";
+import {connect} from "react-redux";
+import {getLessons} from "../../actions/lessons.actions"
 
 class Schedule extends React.Component{
+    constructor(props) {
+        super(props);
+        console.log(this.props);
+        this.state = {};
+    }
 
     btnClickNorwegian = () => {
         console.log("hi"); 
@@ -9,6 +16,7 @@ class Schedule extends React.Component{
     render(){
         const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
         const {lessons} = this.props;
+        const {data} = this.props;
         return(
             <div>
             <div className="schedule-season">1 семестр, 2018</div>
@@ -108,4 +116,14 @@ class Schedule extends React.Component{
     }
 }
 
-export default Schedule;
+export default connect((state) => {
+    return {
+        lessons: state.lessons,
+    };
+}, (dispatch) => {
+return{
+    getLessons: ()=>{
+        getLessons(dispatch)
+    }
+}
+})(Schedule);

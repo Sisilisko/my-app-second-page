@@ -7,10 +7,9 @@ class Footer extends React.Component{
             <div className="footer">
                 <div className="footer-left">
                     <div className="links">
-                        <div><a hash="#">Курсы</a></div>
+                        <div><Link to="/about_us">О нашей школе</Link></div>
                         <div><Link to="/schedule">Расписание</Link></div>
                         <div><Link to="/summer_school">Летняя школа</Link></div>
-                        <div><a href="#">Способы оплаты</a></div>
                         <div><a href="/#reviews-link">Отзывы</a></div>
                     </div>
                 <div className="connects">
