@@ -4,37 +4,56 @@ import {getLessons} from "../../actions/lessons.actions";
 import {schTable} from "../../schedule-lessons-table"
 
 class Schedule extends React.Component{
-    constructor(props) {
+    constructor(props){
         super(props);
-        console.log(this.props);
-        this.state = {schTable};
+        this.state = {schTable: [{
+            id: '',
+            language: '',
+            time: '',
+            date: '',
+            level: '',
+        }]
+    };
+        this.time = ["10:00", "11:00"];
     }
 
-    btnClickNorwegian = () => {
-        console.log("hi"); 
-        this.props.getLessons();
-        if (this.state.language === 'Norwegian') {
-            console.log('bye');
-        }
-    }
-
-    removeLanguage = Finish => {
-        const { language } = this.state;
-    
-        this.setState({
-            lessons: language.filter((language, i) => { 
-                return i !== Finish;
-            })
+    prepareData = (schTable)=>{
+        const arr1 = schTable.map(el => {
+            const lesson = { ...el };
+            lesson.dayWeek = new Date(el.date).getDay();
+            return lesson;
         });
     }
 
-
+    getLessonByTime = (schTable, time)=>{
+        const arr2 = schTable.filter(el=>{
+            return el.time === time
+        })
+        return arr2
+    }
+    // btnClickNorwegian = () => {
+    //     console.log("hi"); 
+    //     this.props.getLessons();
+    //     if (this.state.language === 'Norwegian') {
+    //     
+    //     }
+    // }  
     render(){
+        schTable = this.prepareData(this.props.data);
         // const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
         // const {data} = this.props;
         const { lessons, getLessons, removeLanguage } = this.props;
         return(
             <div>
+                <table>
+                    <th></th>
+                    {this.time.map(el=>{
+                        const rows = []
+                        return <tr>
+                            <td>{el}</td>
+                        </tr>
+                    })}
+                </table>
             <div className="schedule-season">1 семестр, 2018</div>
             <div className="schedule-sheme">
                 <div className="schedule-name">Расписание</div>
