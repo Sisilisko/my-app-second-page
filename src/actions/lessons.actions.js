@@ -6,13 +6,13 @@ export const test = ()=>({
 })
 
 export const getLessons = (dispatch) => {
-    fetch({schTable})
+    // fetch({schTable})
         // .then(data => data.json())
-        .then(data => {
-            const arr = data.map;
+        // .then(data => {
+        //     const arr = data.map;
             dispatch({
                 type: GET_LESSONS,
-                payload: arr,
+                payload: schTable,
             });
-        });
+        // });
 };

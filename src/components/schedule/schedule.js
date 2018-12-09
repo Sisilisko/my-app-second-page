@@ -39,21 +39,24 @@ class Schedule extends React.Component{
     //     }
     // }  
     render(){
-        schTable = this.prepareData(this.props.data);
+        const schTable = this.prepareData(this.props.lessons);
         // const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
         // const {data} = this.props;
+
         const { lessons, getLessons, removeLanguage } = this.props;
+        const data = this.time.map(el=>{
+            return (<tr>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                    <td>{el}</td>
+                </tr>);
+        })
         return(
             <div>
-                <table>
-                    <th></th>
-                    {this.time.map(el=>{
-                        const rows = []
-                        return <tr>
-                            <td>{el}</td>
-                        </tr>
-                    })}
-                </table>
             <div className="schedule-season">1 семестр, 2018</div>
             <div className="schedule-sheme">
                 <div className="schedule-name">Расписание</div>
