@@ -3,14 +3,14 @@ export const schTable = [
         "id": 1,
         "language": "finnish",
         "time": "10:00",
-        "day": "0",
+        "day": 0,
         "level": "C"
     },
     {
         "id": 2,
         "language": "norwegian",
         "time": "11:00",
-        "day": "0",
+        "day": 0,
         "level": "A"
     },
     {

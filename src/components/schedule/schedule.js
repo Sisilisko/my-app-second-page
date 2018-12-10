@@ -6,19 +6,14 @@ import {schTable} from "../../schedule-lessons-table"
 class Schedule extends React.Component{
     constructor(props){
         super(props);
-        this.state = {schTable: [{
-            id: '',
-            language: '',
-            time: '',
-            day: '',
-            level: '',
-        }]
-    };
+        this.state = {
+            schTable: []
+        };
         this.time = ["10:00", "11:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
     }
 
     prepareData = (schTable)=>{
-        const arr1 = schTable.map(el => {
+    return schTable.map(el => {
             const lesson = { ...el };
             lesson.dayWeek = new Date(el.date).getDay();
             return lesson;
@@ -47,7 +42,7 @@ class Schedule extends React.Component{
         const data = this.time.map((el, index) =>{
             const d = schTable.filter(obj => obj.time === el)
             return (<tr key={index}>
-                    <td>{d.filter(r=>r.day === 0).map(r => <div className="Finnish-C">{r.name}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 0).map(r => <div className="Finnish-C">{r.language}</div>)}</td>
                     <td>{el}</td>
                     <td>{el}</td>
                     <td>{el}</td>
