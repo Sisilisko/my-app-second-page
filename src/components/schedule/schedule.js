@@ -14,7 +14,7 @@ class Schedule extends React.Component{
             level: '',
         }]
     };
-        this.time = ["10:00", "11:00"];
+        this.time = ["10:00", "11:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
     }
 
     prepareData = (schTable)=>{
@@ -44,8 +44,9 @@ class Schedule extends React.Component{
         // const {data} = this.props;
 
         const { lessons, getLessons, removeLanguage } = this.props;
-        const data = this.time.map(el=>{
-            return (<tr>
+        const data = this.time.map((el, index) =>{
+            // const d = schTable.filter(obj=> obj.time === el)
+            return (<tr key={index}>
                     <td>{el}</td>
                     <td>{el}</td>
                     <td>{el}</td>
