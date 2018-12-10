@@ -10,7 +10,7 @@ class Schedule extends React.Component{
             id: '',
             language: '',
             time: '',
-            date: '',
+            day: '',
             level: '',
         }]
     };
@@ -45,9 +45,9 @@ class Schedule extends React.Component{
 
         const { lessons, getLessons, removeLanguage } = this.props;
         const data = this.time.map((el, index) =>{
-            // const d = schTable.filter(obj=> obj.time === el)
+            const d = schTable.filter(obj => obj.time === el)
             return (<tr key={index}>
-                    <td>{el}</td>
+                    <td>{d.filter(r=>r.day === 0).map(r => <div className="Finnish-C">{r.name}</div>)}</td>
                     <td>{el}</td>
                     <td>{el}</td>
                     <td>{el}</td>
@@ -65,79 +65,17 @@ class Schedule extends React.Component{
                 <table className="table table-striped" data={schTable}>
                     <thead>
                         <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Пн</th>
-                            <th scope="col">Вт</th>
-                            <th scope="col">Ср</th>
-                            <th scope="col">Чт</th>
-                            <th scope="col">Пт</th>
-                            <th scope="col">Сб</th>
+                            <th></th>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <tr date="10:00">
-                        <th scope="row" key="10:00">10:00</th>
-                        <td><div className="Finnish-C">Финский (С)</div></td>
-                        <td></td>
-                        <td><div className="Finnish-C">Финский (С)</div></td>
-                        <td></td>
-                        <td></td>
-                        <td><div className="Finnish-C">Финский (С)</div></td>
-                    </tr>
-                    <tr date="11:00">
-                        <th scope="row">11:00</th>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td><div className="Island-A">Исландский (А)</div></td>
-                        <td></td>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td><div className="Island-A">Исландский (А)</div></td>
-                        <td><div className="Finnish-C">Финский (С)</div></td>
-                    </tr>
-                    <tr date="17:00">
-                        <th scope="row">17:00</th>
-                        <td></td>
-                        <td></td>
-                        <td><div className="Denmark-A">Датский (А)</div></td>
-                        <td></td>
-                        <td><div className="Denmark-A">Датский (А)</div></td>
-                        <td></td>
-                    </tr>
-                    <tr date="18:00">
-                        <th scope="row">18:00</th>
-                        <td><div className="Sweden-A">Шведский (А)</div></td>
-                        <td><div className="Sweden-A">Шведский (А)</div></td>
-                        <td><div className="Sweden-A">Шведский (А)</div></td>
-                        <td><div className="Sweden-A">Шведский (А)</div></td>
-                        <td></td>
-                        <td><div className="Denmark-Int">Датский (интенсив)</div></td>
-                    </tr>
-                    <tr date="19:00">
-                        <th scope="row">19:00</th>
-                        <td><div className="Island-С">Исландский (С)</div></td>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td><div className="Island-С">Исландский (С)</div></td>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td></td>
-                        <td><div className="Denmark-Int">Датский (интенсив)</div></td>
-                    </tr>
-                    <tr date="20:00">
-                        <th scope="row">20:00</th>
-                        <td><div className="Finnish-AB">Финский (A/B)</div></td>
-                        <td><div className="Sweden-C">Шведский (C)</div></td>
-                        <td><div className="Finnish-AB">Финский (A/B)</div></td>
-                        <td><div className="Sweden-C">Шведский (C)</div></td>
-                        <td><div className="Sweden-C">Шведский (C)</div></td>
-                        <td><div className="Island-С">Исландский (С)</div></td>
-                    </tr>
-                    <tr date="21:00">
-                        <th scope="row">21:00</th>
-                        <td><div className="Denmark-B">Датский (B)</div></td>
-                        <td><div className="Denmark-Int">Датский (интенсив)</div></td>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td><div className="Norwey-A">Норвержский (А)</div></td>
-                        <td></td>
-                        <td></td>
-                    </tr>                  
+                        {data}                 
                     </tbody>
                 </table>
             <div className="schedule-menu">
