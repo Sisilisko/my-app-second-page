@@ -1,7 +1,7 @@
-import {schTable} from "../schedule-lessons-table.js";
 import {GET_LESSONS} from "../actionsConstants"
+import { schTable } from "../schedule-lessons-table";
 
-const lessonsReducer = (state = [], action) => {
+const lessonsReducer = (state = [schTable], action) => {
     switch (action.type) {
         case GET_LESSONS:
             return [...action.payload];

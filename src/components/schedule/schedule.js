@@ -1,24 +1,29 @@
 import React from "react";
 import {connect} from "react-redux";
 import {getLessons} from "../../actions/lessons.actions";
-import {schTable} from "../../schedule-lessons-table"
+import {schTable} from "../../schedule-lessons-table.js"
 
 class Schedule extends React.Component{
+
     constructor(props){
         super(props);
-        this.state = {
-            schTable: []
-        };
-        this.time = ["10:00", "11:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
+        this.state = {schTable: [{schTable}]};
+        this.time = ['10:00', '11:00', '17:00', '18:00', '19:00', '20:00', '21:00'];
+        this.day = [0, 1, 2, 3, 4, 5];
     }
 
-    prepareData = (schTable)=>{
-    return schTable.map(el => {
-            const lesson = { ...el };
-            lesson.dayWeek = new Date(el.date).getDay();
-            return lesson;
-        });
-    }
+    btnClickFinnish = (event) => {
+        this.setState(schTable.filter(obj1 => obj1.language = "Финский"))
+        }
+
+    // prepareData = (schTable) => {
+    // return schTable.map(el => {
+    //         const lesson = { ...el };
+    //         lesson.day = new Date(el.day).getDay();
+    //         console.log(lesson);
+    //         return lesson;
+    //     });
+    // }
 
     getLessonByTime = (schTable, time)=>{
         const arr2 = schTable.filter(el=>{
@@ -26,29 +31,29 @@ class Schedule extends React.Component{
         })
         return arr2
     }
-    // btnClickNorwegian = () => {
-    //     console.log("hi"); 
-    //     this.props.getLessons();
-    //     if (this.state.language === 'Norwegian') {
-    //     
-    //     }
-    // }  
+  
     render(){
-        const schTable = this.prepareData(this.props.lessons);
+        // let schTable = []
+        // if (this.state.lesson === ""){
+        //     let schTable = this.prepareData(this.props.lessons);
+        // } else {
+        //     schTable = this.prepareData(this.props.lessons.filter(el=>el.lesson === this.state.lesson))
+        // }
+        // const schTable = this.prepareData(this.props.lessons);
         // const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
         // const {data} = this.props;
 
-        const { lessons, getLessons, removeLanguage } = this.props;
+        const { lessons } = this.props;
         const data = this.time.map((el, index) =>{
-            const d = schTable.filter(obj => obj.time === el)
+            const d = schTable.filter(obj => obj.time === el);
             return (<tr key={index}>
-                    <td>{d.filter(r=>r.day === 0).map(r => <div className="Finnish-C">{r.language}</div>)}</td>
                     <td>{el}</td>
-                    <td>{el}</td>
-                    <td>{el}</td>
-                    <td>{el}</td>
-                    <td>{el}</td>
-                    <td>{el}</td>
+                    <td>{d.filter(r=>r.day === 0).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 1).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 2).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 3).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 4).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td>{d.filter(r=>r.day === 5).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
                 </tr>);
         })
         return(
@@ -57,7 +62,7 @@ class Schedule extends React.Component{
             <div className="schedule-sheme">
                 <div className="schedule-name">Расписание</div>
                 <div className="schedule-both">
-                <table className="table table-striped" data={schTable}>
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th></th>
@@ -75,11 +80,11 @@ class Schedule extends React.Component{
                 </table>
             <div className="schedule-menu">
                 <div className="all-lessons" onClick={this.btnClickAllLessons}>Все занятия</div>
-                <div className="Norwegian" onClick={this.btnClickNorwegian} data={lessons} click={getLessons}>Норвержский</div>
+                <div className="Norwegian" onClick={this.btnClickNorwegian} data={lessons}>Норвержский</div>
                 <div className="Danish" onClick={this.btnClickDanish}>Датский</div>
                 <div className="Swedish" onClick={this.btnClickSwedish}>Шведский</div>
                 <div className="Icelandic" onClick={this.btnClickIcelandic}>Исландский</div>
-                <div className="Finish" onClick={this.btnClickFinnish} click={removeLanguage}>Финский</div>
+                <div className="Finish" onClick={this.btnClickFinnish}>Финский</div>
             </div>
             </div>
             </div>

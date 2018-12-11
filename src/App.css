@@ -522,7 +522,8 @@ a:hover {
     font-family: 'Amatic SC';
 }
 .Finnish-C, .Finnish-AB, .Finish{
-    background-color: #6CB5D7;
+    background-color: #A9AAAF;
+    border-radius: 10px;
 }
 .Norwey-A, .Norwegian{
     background-color: #7290B6;
@@ -543,7 +544,7 @@ td div, .all-lessons, .Norwegian, .Danish, .Swedish, .Icelandic, .Finish{
     width: 160px;
     text-align: center;
     padding: 11px;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 48px;
     vertical-align: middle;
     display: inherit;
@@ -551,6 +552,8 @@ td div, .all-lessons, .Norwegian, .Danish, .Swedish, .Icelandic, .Finish{
 }
 td div:hover{
     transform: scale(1.1);
+    border-radius: 10px;
+
 }
 .schedule-both{
     vertical-align: top;
