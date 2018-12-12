@@ -7,6 +7,7 @@ class OptionSS extends React.Component{
                 <div className="Finnish-picture">
                     <div className="Sity-name">Хельсинки</div>
                     <table className="tags">
+                    <tbody>
                         <tr>
                             <th className="tags-name"># Финский</th>
                             <th className="tags-name"># Познавательно</th>
@@ -15,6 +16,7 @@ class OptionSS extends React.Component{
                             <th className="tags-name"># Спортивно</th>
                             <th className="tags-name"></th>
                         </tr>
+                    </tbody>
                     </table>
                 </div>
                 <div className="Finnish-ss-info">
