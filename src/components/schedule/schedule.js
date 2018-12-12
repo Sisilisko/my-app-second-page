@@ -14,8 +14,10 @@ class Schedule extends React.Component{
 
     btnClickFinnish = (event) => {
         this.setState(schTable.filter(obj1 => obj1.language = "Финский"))
-        }
-
+    };
+    btnClickIcelandic = (event) => {
+        this.setState(schTable.filter(obj2 => obj2.language = "Исландский"))
+    }
     // prepareData = (schTable) => {
     // return schTable.map(el => {
     //         const lesson = { ...el };
