@@ -7,17 +7,29 @@ class Schedule extends React.Component{
 
     constructor(props){
         super(props);
-        this.state = {schTable: [{schTable}]};
+        this.state = {schTable: schTable};
         this.time = ['10:00', '11:00', '17:00', '18:00', '19:00', '20:00', '21:00'];
         this.day = [0, 1, 2, 3, 4, 5];
     }
 
     btnClickFinnish = (event) => {
-        this.setState(schTable.filter(obj1 => obj1.language = "Финский"))
+        this.setState({schTable: schTable.filter(obj1 => obj1.language === "Финский")})
     };
     btnClickIcelandic = (event) => {
-        this.setState(schTable.filter(obj2 => obj2.language = "Исландский"))
-    }
+        this.setState({schTable: schTable.filter(obj1 => obj1.language === "Исландский")})
+    };
+    btnClickSwedish = (event) => {
+        this.setState({schTable: schTable.filter(obj1 => obj1.language === "Шведский")})
+    };
+    btnClickDanish = (event) => {
+        this.setState({schTable: schTable.filter(obj1 => obj1.language === "Датский")})
+    };
+    btnClickNorwegian = (event) => {
+        this.setState({schTable: schTable.filter(obj1 => obj1.language === "Норвежский")})
+    };
+    btnClickAllLessons = (event) => {
+        this.setState({schTable: schTable})
+    };
     // prepareData = (schTable) => {
     // return schTable.map(el => {
     //         const lesson = { ...el };
@@ -47,7 +59,7 @@ class Schedule extends React.Component{
 
         const { lessons } = this.props;
         const data = this.time.map((el, index) =>{
-            const d = schTable.filter(obj => obj.time === el);
+            const d = this.state.schTable.filter(obj => obj.time === el);
             return (<tr key={index}>
                     <td>{el}</td>
                     <td>{d.filter(r=>r.day === 0).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
