@@ -62,12 +62,12 @@ class Schedule extends React.Component{
             const d = this.state.schTable.filter(obj => obj.time === el);
             return (<tr key={index}>
                     <td>{el}</td>
-                    <td>{d.filter(r=>r.day === 0).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
-                    <td>{d.filter(r=>r.day === 1).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
-                    <td>{d.filter(r=>r.day === 2).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
-                    <td>{d.filter(r=>r.day === 3).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
-                    <td>{d.filter(r=>r.day === 4).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
-                    <td>{d.filter(r=>r.day === 5).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 0).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 1).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 2).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 3).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 4).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
+                    <td className="tableElement">{d.filter(r=>r.day === 5).map((r, index) => <div key={index} className="Finnish-C">{r.language}</div>)}</td>
                 </tr>);
         })
         return(

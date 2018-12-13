@@ -970,4 +970,7 @@ td div:hover{
     top: 15px;
     width: 70%;
 }
+.tableElement{
+    width: 170px;
+}
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC')
