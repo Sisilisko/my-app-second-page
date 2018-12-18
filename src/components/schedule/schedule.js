@@ -7,7 +7,7 @@ class Schedule extends React.Component{
 
     constructor(props){
         super(props);
-        this.state = {schTable: schTable};
+        this.state = {schTable: this.props.lessons};
         this.time = ['10:00', '11:00', '17:00', '18:00', '19:00', '20:00', '21:00'];
         this.day = [0, 1, 2, 3, 4, 5];
     }
@@ -30,14 +30,6 @@ class Schedule extends React.Component{
     btnClickAllLessons = (event) => {
         this.setState({schTable: schTable})
     };
-    // prepareData = (schTable) => {
-    // return schTable.map(el => {
-    //         const lesson = { ...el };
-    //         lesson.day = new Date(el.day).getDay();
-    //         console.log(lesson);
-    //         return lesson;
-    //     });
-    // }
 
     getLessonByTime = (schTable, time)=>{
         const arr2 = schTable.filter(el=>{
@@ -47,16 +39,6 @@ class Schedule extends React.Component{
     }
   
     render(){
-        // let schTable = []
-        // if (this.state.lesson === ""){
-        //     let schTable = this.prepareData(this.props.lessons);
-        // } else {
-        //     schTable = this.prepareData(this.props.lessons.filter(el=>el.lesson === this.state.lesson))
-        // }
-        // const schTable = this.prepareData(this.props.lessons);
-        // const {btnClickAllLessons, btnClickNorwegian, btnClickSwedish, btnClickDanish, btnClickIcelandic, btnClickFinnish} = this.props;
-        // const {data} = this.props;
-
         const { lessons } = this.props;
         const data = this.time.map((el, index) =>{
             const d = this.state.schTable.filter(obj => obj.time === el);

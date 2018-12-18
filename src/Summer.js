@@ -8,7 +8,7 @@ import OrderSS from "./components/order_ss";
 class Summer extends Component {
   render() {
     return(
-      <div className="Summer">
+      <div className="Summer-main">
       <Header />
       <TitleSS />
       <OptionSS />

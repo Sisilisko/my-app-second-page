@@ -10,6 +10,7 @@ class Price extends Component {
     return (
         <div className="Price">
             <Header />
+            <div className="title_price">Скоро здесь будут цены! :) </div>
             <Button />
             <Footer />
         </div>

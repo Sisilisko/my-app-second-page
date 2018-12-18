@@ -14,8 +14,8 @@ class Header extends React.Component{
             </div>
             <nav className="nav">
                 <Link to="/schedule/" className="/schedule">Расписание</Link>
-                <a href="/prices/" className="paying">Цены</a>
-                <a href="/about_us/" className="info">О нас</a>
+                <Link to="/prices/" className="paying">Цены</Link>
+                <Link to="/about_us/" className="info">О нас</Link>
                 <Link to="/summer_school/" className="signin">Летняя школа</Link>
             </nav>
         </div>

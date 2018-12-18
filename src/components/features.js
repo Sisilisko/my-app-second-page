@@ -1,5 +1,4 @@
 import React from "react";
-import houses from "../img/houses.png";
 import sign1 from "../img/sign1.png";
 import sign2 from "../img/sign2.png";
 import sign3 from "../img/sign3.png";
@@ -10,7 +9,6 @@ class Features extends React.Component{
     render(){
         return(
             <div className="features">
-            <img src={houses} className="img-features" alt="img-features" />
             <div className="pluses">
                 <div className="row">
                     <div className="col-sm">
@@ -35,6 +33,7 @@ class Features extends React.Component{
                 </div>
             <a href="https://trello.com/b/N4dpxK7T/level-up-web-dev-grey-team" className="knowledge-botton">Узнать больше о школе</a>
             </div>
+            <div className="img-features"></div>
         </div>
         );
     }
