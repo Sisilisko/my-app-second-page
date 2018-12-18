@@ -12,7 +12,7 @@ class Slider extends React.Component{
                 <div className="denmark"><Link to=""><div className="denmark-flag"></div>dansk<br />датский</Link></div>
                 <div className="suomi"><Link to=""><div className="suomi-flag"></div>suomi<br />финский</Link></div>
             </div>
-        <div className="responce-button" id="responce-btn">Оставить заявку<br />на обучение</div>
+        <div className="responce-button" id="responce-btn">Оставьте заявку<br />на обучение</div>
         </div>
         );
     }

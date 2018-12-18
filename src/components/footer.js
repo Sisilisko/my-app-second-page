@@ -34,7 +34,7 @@ class Footer extends React.Component{
                     <label className="col-form-label">e-mail</label>
                     <input type="text" className="form-control" id="ml" name="ml" />
                 </div>
-                    <a href="https://trello.com/b/N4dpxK7T/level-up-web-dev-grey-team" className="knowledge-lesson">Записаться</a>
+                    <a href="/#reviews-link" className="knowledge-lesson">Записаться</a>
                     <div className="rights">
                     <small>2018 © Все права защищены</small>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import sign1 from "../img/sign1.png";
 import sign2 from "../img/sign2.png";
 import sign3 from "../img/sign3.png";
@@ -31,7 +32,7 @@ class Features extends React.Component{
                     <div className="col-2"><img src={sign4} alt="sign4" /></div>
                     <div className="col-10">ежегодное закрепление полученных знаний в летних школах</div>
                 </div>
-            <a href="https://trello.com/b/N4dpxK7T/level-up-web-dev-grey-team" className="knowledge-botton">Узнать больше о школе</a>
+            <Link to="/about_us/" className="knowledge-botton">Узнать больше о школе</Link>
             </div>
             <div className="img-features"></div>
         </div>
